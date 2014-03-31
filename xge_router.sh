@@ -22,7 +22,7 @@ rate_out=${rate_out:-1000}
 
 
 LOG() {
-	echo "$(date +"%Y-%m-%d %H:%M:%S") $HOSTNAME ${0##*/}[$$]: $@ $DATA"
+	echo "$(date +"%Y-%m-%d %H:%M:%S") $HOSTNAME ${0##*/}[$$]: $@ ${DATA:-No DATA was set, possible bug}"
 }
 
 __xge_send() {
